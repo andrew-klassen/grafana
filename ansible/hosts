@@ -1,5 +1,7 @@
-[all:children]
-server
 
-[server]
+[database]
 127.0.0.1
+
+[app]
+127.0.0.1
+
