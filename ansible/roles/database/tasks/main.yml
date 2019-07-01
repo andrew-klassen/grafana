@@ -1,0 +1,17 @@
+
+- name: install influxdb
+  apt:
+    deb: https://dl.influxdata.com/influxdb/releases/influxdb_1.7.7_amd64.deb
+
+- name: allow influxdb through firewall   
+  ufw:
+    rule: allow
+    port: "8086"
+    proto: tcp
+
+- name: start and enable influxdb
+  service:
+    name: influxdb
+    state: restarted
+    enabled: yes
+

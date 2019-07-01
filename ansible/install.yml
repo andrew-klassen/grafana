@@ -1,0 +1,17 @@
+ 
+- hosts: database
+  become: true
+  gather_facts: no
+  vars_files:
+   - vars
+  roles:
+   - database
+
+- hosts: app
+  become: true
+  gather_facts: no
+  vars_files:
+   - vars
+  roles:
+   - app
+
